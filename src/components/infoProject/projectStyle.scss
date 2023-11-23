@@ -1,0 +1,93 @@
+@import '../../assets/styles/allStyle.scss';
+
+.project{
+    background: $SectionBg;
+    position: relative;
+    width: 100%;
+    padding: 60px 0 80px 0;
+
+    &__wrapper-title{
+        text-align: center;
+
+        h3{
+            @include montserratMedium();
+
+            font-size: 58px;
+            color: $colorTitle;
+        }   
+    }
+
+    &__wrapper-introduction-inner{
+        margin-top: 120px;
+    }
+
+    &__wrapper-introduction-inner-title{
+
+        h3{
+            @include poppinsMedium();
+            
+            font-size: 46px;
+            color: $colorTitle;
+            padding-right: 320px;
+            line-height: 62px;
+        }
+    }
+
+    &__wrapper-introduction-inner-data-post{
+
+        margin-top: 20px;
+
+        h5{
+            @include montserratRegular();
+
+            font-size: 22px;
+            color: $colorDataPost;
+        }
+    }
+
+    &__wrapper-introduction-inner-text{
+        margin-top: 40px;
+        p{
+            @include poppinsRegular();
+
+            font-size: 20px;
+            color: $colorInContentText;
+            padding-top: 40px;
+            line-height: 30px;
+        }
+    }
+
+    &__wrapper-information-inner{
+        margin-top: 140px;
+    }
+
+    &__wrapper-information-inner-title{
+
+        h3{
+            @include poppinsMedium();
+
+            font-size: 42px;
+            color: $colorTitle;
+        }
+
+        h4{
+            @include poppinsMedium();
+
+            font-size: 28px;
+            color: $colorTitle;
+            margin-top: 40px;
+        }
+    }
+
+    &__wrapper-information-inner-text{
+
+        p{
+            @include poppinsRegular();
+
+            font-size: 18px;
+            line-height: 30px;
+            color: $colorInContentText;
+            margin-top: 40px;
+        }
+    }
+}

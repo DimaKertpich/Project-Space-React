@@ -1,0 +1,263 @@
+@import '../../assets/styles/allStyle.scss';
+
+.header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+
+    &__hide{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, .3);
+        z-index: 1000;
+    }
+
+    &__wrapper-nav{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__wrapper-nav-logo{
+        display: flex;
+        margin-top: 60px;
+    }
+
+    &__wrapper-nav-logo-text{
+        
+        p{
+            @include poppinsMedium();
+
+            font-size: 26px;
+            color: $colorWhite;
+            line-height: 28px;
+            margin: 20px 0 26px 8px;
+
+                span{
+                    font-size: 20px;
+                }
+        }
+   }
+
+   &__wrapper-nav-manu{
+        margin-top: 104px;
+
+        li{
+            @include poppinsMedium();
+
+            font-size: 24px;
+            color: $colorWhite;
+            display: inline-block;
+            list-style-type: none;
+            text-decoration: none;
+            cursor: pointer;
+            margin-right: 26px;
+            border-radius: 26px;
+            padding: 6px 16px;
+        }
+
+        li:nth-child(4){
+            margin-right: 0px;
+        }
+
+        li:hover{
+            color: $colorBlack;
+            transition: .2s ease-in;
+            background: $colorWhite;
+        }
+   }
+
+   &__wrapper-title{
+    margin-top: 160px;
+        text-align: center;
+
+        h3{
+            @include montserratSemiBold();
+
+            font-size: 56px;
+            color: $colorWhite;
+        }
+
+        h4{
+            @include montserratMedium();
+
+            position: relative;
+            margin-top: 20px;
+            font-size: 20px;
+            color: $colorWhite;
+
+            ::before{
+                content: '';
+                background: $colorWhite;
+                width: 36px;
+                height: 1px;
+                position: absolute;
+                top: 40%;
+                left: 33%;
+            }
+
+            ::after{
+                content: '';
+                background: $colorWhite;
+                width: 36px;
+                height: 1px;
+                position: absolute;
+                top: 40%;
+                right: 33%;
+            }
+
+                a{
+                    color: $colorAuthorText;
+                    text-decoration: none;
+                }
+        }
+
+        p{
+            @include poppinsRegular();
+            
+            margin-top: 40px;
+            padding: 0 60px;
+            font-size: 18px;
+            color: $colorText;
+        }
+   }
+
+   &__wrapper-title-btn{
+
+        margin-top: 60px;
+
+        button{
+            @include poppinsRegular();
+
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            background: $colorHeaderBtn;
+            color: $colorWhite;
+            padding: 14px 20px;
+            cursor: pointer;
+        }
+   }
+
+
+   &__parallax{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 5;
+   }
+
+   &__space-item{
+        width: 100%;
+        height: 100vh;
+
+    li{
+        position: absolute;
+        list-style-type: none;
+        text-decoration: none;
+    }
+
+    li:nth-child(1){
+        top: 4%;
+        right: 2%;
+    }
+
+    li:nth-child(2){
+        top: -2%;
+        left: -2%;
+        height: 110vh;
+    }
+
+    li:nth-child(3){
+        bottom: 8%;
+        right: 2%;
+
+            img{
+                width: 360px;
+                rotate: -42deg;
+            }
+    }
+
+    li:nth-child(4){
+        bottom: 8%;
+        left: 34%;
+
+            img{
+                width: 260px;
+                rotate: 26deg;
+            }
+    }
+
+    li:nth-child(5){
+        top: 18%;
+        left: 54%;
+
+            img{
+                width: 90px;
+                rotate: 12deg;
+                opacity: .5;
+            }
+    }
+
+    li:nth-child(6){
+        bottom: 28%;
+        right: 32%;
+
+            img{
+                width: 180px;
+                rotate: 12deg;
+                opacity: .9;
+            }
+    }
+
+    li:nth-child(7){
+        bottom: 32%;
+        left: 22%;
+
+            img{
+                width: 140px;
+                rotate: 56deg;
+                opacity: .9;
+            }
+    }
+
+    li:nth-child(8){
+        top: 36%;
+        right: 18%;
+
+            img{
+                width: 90px;
+                rotate: 36deg;
+                opacity: .9;
+            }
+    }
+
+    li:nth-child(9){
+        top: 40%;
+        left: 38%;
+
+            img{
+                width: 80px;
+                rotate: 46deg;
+                opacity: .9;
+            }
+    }
+
+    li:nth-child(10){
+        top: 24%;
+        left: 20%;
+
+            img{
+                width: 140px;
+                rotate: 16deg;
+                opacity: .9;
+            }
+    }
+   }
+}

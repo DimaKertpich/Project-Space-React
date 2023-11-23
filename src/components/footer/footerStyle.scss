@@ -1,0 +1,143 @@
+@import '../../assets/styles/allStyle.scss';
+
+.footer{
+    padding: 40px 0 60px 0;
+    position: relative;
+    background: $colorBgFooter;
+    width: 100%;
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__wrapper-nav{
+        display: flex;
+        justify-content: space-between
+    }
+
+    &__wrapper-nav-features,
+    &__wrapper-nav-service{
+        margin-left: 50px;
+    }
+
+    &__wrapper-nav-about,
+    &__wrapper-nav-features,
+    &__wrapper-nav-service{
+
+
+
+        ul{
+            li{ 
+                @include poppinsMedium();
+
+                font-size: 20px;
+                list-style-type: none;
+                cursor: pointer;
+                color: $colorWhite;
+                line-height: 54px;
+            }
+
+            li:nth-child(1){
+                @include jostSemiBold();
+
+                font-size: 22px;
+                color: $colorTitleFooterText;
+            }
+        }
+    }
+
+    &__wrapper-meta-space{
+        background: $colorBgFooterMeta;
+        border-radius: 20px;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__wrapper-meta-space-desc{
+        padding-right: 60px;
+    }
+
+    &__wrapper-meta-space-desc-img{
+        display: flex;
+
+        img{
+            width: 50px;
+        }
+
+        p{
+            @include jostLight();
+
+            margin: 0;
+            padding: 8px 0 0 4px;
+            color: $colorSpanFooterMetaInfo;
+
+            span{
+                @include poppinsLight();
+
+                color: $colorWhite;
+            }
+        }
+    }
+
+    &__wrapper-meta-space-desc-btn{
+        margin-top: 10px;
+
+        button{
+            @include poppinsLight();
+
+            font-size: 14px;
+            padding: 5px 20px;
+            border-radius: 12px;
+            color: $colorWhite;
+            border: 1px solid $colorBtnFooterMeta;
+            background: $colorBtnFooterMeta;
+            cursor: pointer;
+        }
+    }
+
+    &__wrapper-meta-space-info{
+        display: flex;
+        justify-content: space-between;
+
+        ul{
+
+            li{
+                @include jostRegular();
+
+                font-size: 16px;
+                color: $colorSpanFooterMetaInfo;
+                list-style-type: none;
+                line-height: 32px;
+            }
+        }
+    }
+
+    &__wrapper-meta-social{
+        
+        margin-top: 40px;
+
+        h3{
+            @include poppinsLight();
+
+            font-size: 26px;
+            color: $colorWhite;
+        }
+    }
+
+    &__wrapper-meta-social-link{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        width: 80%;
+    }
+}
+
+#info-calc{
+    padding-left: 30px;
+
+    li{
+        color: $colorWhite;
+    }
+}

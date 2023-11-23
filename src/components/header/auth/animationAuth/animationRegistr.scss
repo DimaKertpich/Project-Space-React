@@ -1,0 +1,107 @@
+@import '../../../../assets/styles/allStyle.scss';
+
+.animationRegistr{
+    &__wrapper-logIn-animation-asteroid{
+        position: absolute;
+        bottom: -1%;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    &__wrapper-logIn-animation-astronaut{
+        position: absolute;
+        bottom: 10%;
+        right: 14%;
+        z-index: 10;
+        transition: 1s ease-in;
+
+        img{
+            width: 90px;
+            transition: 1s ease-in;
+        }
+    }
+
+    &__wrapper-logIn-animation-earth{
+        position: absolute;
+        top: 10%;
+        left: 14%;
+
+        img{
+            width: 140px;
+        }
+    }
+
+    &__wrapper-logIn-animation-moon{
+        position: absolute;
+        top: 4%;
+        left: 46%;
+        
+        img{
+            width: 40px;
+        }
+    }
+
+    &__wrapper-logIn-animation-hover{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .7);
+        z-index: 1000;
+        opacity: 0;
+        transition: .2s ease-in;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        h3{
+            @include jostRegular();
+
+            font-size: 32px;
+            color: $colorWhite;
+        }
+    }
+
+    .authorization__wrapper-logIn-animation:hover &__wrapper-logIn-animation-hover{
+        opacity: 1;
+        transition: .2s ease-in;
+    }
+
+}
+
+.moveAstronautOne{
+    bottom: 26%;
+    right: 28%;
+    transition: 1s ease-in;
+
+    img{
+        width: 82px;
+        transition: 1s ease-in;
+    }
+}
+
+.moveAstronautTwo{
+    bottom: 36%;
+    right: 42%;
+    transition: 1s ease-in;
+
+    img{
+        width: 76px;
+        transition: 1s ease-in;
+    }
+}
+
+.moveAstronautThree{
+    bottom: 46%;
+    right: 62%;
+    transition: 1s ease-in;
+
+    img{
+        width: 72px;
+        transition: 1s ease-in;
+    }
+}
