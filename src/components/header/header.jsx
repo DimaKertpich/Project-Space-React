@@ -8,8 +8,14 @@ import moon from '../../assets/image/moon.png'
 import cometFirst from '../../assets/image/comet1.png'
 import cometSecond from '../../assets/image/comet2.png'
 import cometThird from '../../assets/image/comet3.png'
+import { useDispatch, useSelector } from "react-redux"
+import { toggleAuthWin } from '../store/authUserSlice'
+
 
 function Header(){
+
+    const dispatch = useDispatch()
+    const toggleAuth = useSelector((state) => state.auth.activeAuth)
 
     const buttonRight ={
         marginRight: '10px'
@@ -25,6 +31,7 @@ function Header(){
         var parallaxInstance = new Parallax(headerEl.current);
         return () => parallaxInstance.disable();
     })
+
     return(
         <header className='header'>
 
@@ -51,7 +58,7 @@ function Header(){
                             <li>Home</li>
                             <li>Swap</li>
                             <li>Our project</li>
-                            <li>Sing in</li>
+                            <li onClick={() => dispatch(toggleAuthWin())}>Sing in</li>
                         </ul>
                     </div>
                     <div className='header__wrapper-title'>
@@ -86,8 +93,8 @@ function Header(){
                     <li><img src={cometSecond} alt="comet" /></li>
                 </ul> 
             </div> 
-            <div className='header__hide'></div>
-            <Authorization></Authorization>
+            { toggleAuth === true && <div className='header__hide'></div>}
+            { toggleAuth === true && <Authorization></Authorization>}
         </header>
     )
 }

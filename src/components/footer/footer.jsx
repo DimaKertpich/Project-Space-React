@@ -4,6 +4,7 @@ import telegram from '../../assets/image/social/telegram 1.png'
 import discord from '../../assets/image/social/discord 1.png'
 import facebook from '../../assets/image/social/free-icon-facebook-145802 1.png'
 import linkedIn from '../../assets/image/social/linkedin 1.png'
+import astronaut from '../../assets/image/astronaut/29456501_5800_3_10.png'
 import './footerStyle.scss'
 
 function Footer(){
@@ -90,6 +91,11 @@ function Footer(){
                     </div>
                 </div>
             </div>
+
+            <div className='footer__astronaut'>
+                <img src={astronaut} alt='astronaut'></img>
+            </div>
+
         </footer>
     )
 }

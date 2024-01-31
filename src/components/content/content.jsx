@@ -41,12 +41,8 @@ function Content(){
 
     // switching pictures
 
-
-
     function funonload() {
-        setElectContent(electContent = document.querySelectorAll('.content__wrapper-dec-features'))
-
-       
+        setElectContent(electContent = document.querySelectorAll('.content__wrapper-dec-features'))  
         deleteMoveImg();
     } 
 

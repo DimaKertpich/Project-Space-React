@@ -4,10 +4,14 @@ import AnimationRegistr from './animationAuth/animationRegistr'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faCheck } from '@fortawesome/free-solid-svg-icons'
 import './auth.scss'
+import { useDispatch } from 'react-redux'
+import { toggleAuthWin } from '../../store/authUserSlice'
 
 
 
 function Authorization(){
+
+    const dispatch = useDispatch();
 
     // Register form
 
@@ -65,13 +69,6 @@ function Authorization(){
 
         const count = fieldEnterRegistr.filter((item) => item.cheked).length
         setCurrentAnimation(count)
-
-        // let stemAnimationAstronaut = 0
-        // for(let i = 0; i < fieldEnterRegistr.length; i++){
-        //     if(fieldEnterRegistr[i].cheked){
-        //         stemAnimationAstronaut++
-        //          // Передаю в дочірній компонент
-        //     }
     }, [fieldEnterRegistr[currentInput].cheked])
 
     function activeLogIn(){
@@ -103,7 +100,6 @@ function Authorization(){
                 }
             }))
     }
-
         // Log in form
 
     let fieldEnterLogIn = [
@@ -147,7 +143,7 @@ function Authorization(){
                         { showFieldEnterRegistr }
                     </div>
                     <div className='authorization__wrapper-registration-btn'>
-                        <button id='authorization__wrapper-registration-btn-back' type='button'>Back</button>
+                        <button onClick={() => dispatch(toggleAuthWin())} id='authorization__wrapper-registration-btn-back' type='button'>Back</button>
                         <button type='button'>Create account</button>
                     </div>
 
@@ -155,7 +151,6 @@ function Authorization(){
                         <AnimationLogIn></AnimationLogIn>
                     </div>
                 </div>
-
 
                 {/* Log In */}
 
@@ -169,7 +164,7 @@ function Authorization(){
                         { showFieldEnterLogIn }
                     </div>
                     <div className='authorization__wrapper-logIn-btn'>
-                        <button id='authorization__wrapper-logIn-btn-back' type='button'>Back</button>
+                        <button onClick={() => dispatch(toggleAuthWin())} id='authorization__wrapper-logIn-btn-back' type='button'>Back</button>
                         <button type='button'>Log In</button>
                     </div>
 

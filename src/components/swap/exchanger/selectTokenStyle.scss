@@ -1,0 +1,91 @@
+@import '../../../assets/styles/allStyle.scss';
+
+.selectToken{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -320px;
+    margin-left: -230px;
+    background: $SectionBg;
+    width: 460px;
+    height: 590px;
+    border-radius: 6px;
+    z-index: 10;
+
+    &__wrapper{
+        padding: 30px 40px;
+    }
+
+    &__wrapper-title{
+        display: flex;
+        justify-content: space-between;
+
+        h3{
+            @include montserratSemiBold();
+
+            font-size: 26px;
+            color: $colorBlack;
+        }
+    }
+
+    &__wrapper-title-faXmark{
+        font-size: 24px;
+        padding-top: 4px;
+        cursor: pointer;
+    }
+
+    &__wrapper-search{
+        
+        input{
+            @include poppinsRegular();
+
+            position: relative;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0 8px;
+            height: 30px;
+            outline: none;
+            margin-top: 14px;
+            border-radius: 6px;
+            border: none;
+            background: #E8E8E8;
+        }
+    }
+
+    &__wrapper-choose{
+        margin-top: 40px;
+    }
+
+    &__wrapper-tokens{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 26px;
+        cursor: pointer;
+    }
+
+    &__wrapper-tokens-title{
+        display: flex;
+
+    }
+
+    &__wrapper-tokens-title-img{
+
+        img{
+            width: 34px;
+        }
+    }
+
+    &__wrapper-tokens-title-name{
+        @include poppinsRegular();
+
+        
+        padding: 7px 0 0 8px;
+    }
+
+    &__wrapper-tokens-price{
+        @include poppinsRegular();
+
+        padding: 7px 0 0 0;
+        color: $colorCheck;
+    }
+}

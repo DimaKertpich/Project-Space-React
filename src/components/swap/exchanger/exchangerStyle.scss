@@ -1,0 +1,96 @@
+@import '../../../assets/styles/allStyle.scss';
+
+.exchanger{
+
+    &__wrapper{
+        width: 500px;
+        height: 620px;
+        background: $colorSwapToken;
+        border-radius: 12px;
+        padding: 30px 40px;
+    }
+
+    &__wrapper-order{
+        display: flex;
+        justify-content: space-between;
+        padding-right: 310px;
+    }
+
+    &__wrapper-order-market,
+    &__wrapper-order-limit{
+        @include poppinsRegular();
+
+        font-size: 20px;
+        color: $colorWhite;
+        padding: 8px 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: .1s ease-in;
+    }
+
+    &__wrapper-swap{
+        margin-top: 60px;
+        width: 100%;
+    }
+
+    &__wrapper-swap-from,
+    &__wrapper-swap-to{
+        background: $colorSwapElemBg;
+        padding: 16px 16px;
+        height: 140px;
+        border-radius: 6px;
+    }
+
+    &__wrapper-swap-to{
+        margin-top: 60px;
+    }
+
+    &__wrapper-swap-to-select,
+    &__wrapper-swap-from-select{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__wrapper-swap-to-select-to,
+    &__wrapper-swap-from-select-from{
+        @include poppinsRegular();
+
+        font-size: 18px;
+        color: $colorSpanFooterMetaInfo;
+    }
+
+    &__wrapper-swap-to-select-token,
+    &__wrapper-swap-from-select-token{
+        @include poppinsRegular();
+
+        font-size: 18px;
+        cursor: pointer;
+        color: $colorWhite;
+
+        img{
+            width: 36px;
+        }
+    }
+
+    &__wrapper-swap-btn{
+
+        button{
+            @include poppinsRegular();
+
+            font-size: 22px;
+            color: $colorWhite;
+            background: $colorSwapElemBg;
+            border-radius: 6px;
+            width: 100%;
+            margin-top: 60px;
+            padding: 14px 0;
+            border: 1px solid $colorSwapElemBg;
+            cursor: pointer;
+        }
+    }
+}
+
+.activeOrder{
+    background: $colorSwapElemBg;
+    transition: .1s ease-in;
+}

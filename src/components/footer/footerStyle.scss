@@ -132,6 +132,15 @@
         margin-top: 20px;
         width: 80%;
     }
+
+    &__astronaut{
+        position: absolute;
+        top: -31%;
+        right: 6%;
+        img{
+            width: 180px;
+        }
+    }
 }
 
 #info-calc{
