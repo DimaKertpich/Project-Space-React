@@ -1,68 +1,85 @@
 import { createSlice } from "@reduxjs/toolkit";
-import Bitcoin from '../../assets/image/swap/3838998_bitcoin_cryptocurrency_currency_money_finance_icon.png'
-import Ethereum from '../../assets/image/swap/4373172_ethereum_logo_logos_icon.png'
-import Near from '../../assets/image/swap/9297394_near_blockchain_coins_cryptocurrency_crypto_icon.png'
-import OneInch from '../../assets/image/swap/icons8-1inch-64.png'
-import Solana from '../../assets/image/swap/icons8-solana-512.png'
-import Atom from '../../assets/image/swap/science_9744839.png'
-import Xrp from '../../assets/image/swap/xrp_4279259.png'
+import Usdt from '../../assets/image/swap/usdt.png'
+import Bitcoin from '../../assets/image/swap/bitcoin.png'
+import Ethereum from '../../assets/image/swap/ethereum.png'
+import Near from '../../assets/image/swap/near.png'
+import OneInch from '../../assets/image/swap/1Inch.png'
+import Solana from '../../assets/image/swap/solana.png'
+import Atom from '../../assets/image/swap/atom.png'
+import Xrp from '../../assets/image/swap/xrp.png'
 
 const initialState = {
     showToken: false,
     arrayTokens: [
         {
+            name: 'Usdt',
+            image: Usdt,
+            price: '1',
+            count: 1000,
+            abb: 'usdt',
+            id: 0
+        },
+        {
             name: 'Bitcoin',
             image: Bitcoin,
             price: '44000',
             count: 0,
-            id: 0
+            abb: 'btc',
+            id: 1
         },
         {
             name: 'Ethereum',
             image: Ethereum,
             price: '2100',
             count: 0,
-            id: 1
+            abb: 'eth',
+            id: 2
         },
         {
             name: 'Near',
             image: Near,
             price: '3',
             count: 0,
-            id: 2
+            abb: 'near',
+            id: 3
         },
         {
             name: '1Inch',
             image: OneInch,
             price: '1',
             count: 0,
-            id: 3
+            abb: 'oneInch',
+            id: 4
         },
         {
             name: 'Solana',
             image: Solana,
             price: '100',
             count: 0,
-            id: 4
+            abb: 'sol',
+            id: 5
         },
         {
             name: 'Atom',
             image: Atom,
             price: '10',
             count: 0,
-            id: 5
+            abb: 'atom',
+            id: 6
         },
         {
             name: 'XRP',
             image: Xrp,
             price: '1',
             count: 0,
-            id: 6
+            abb: 'xrp',
+            id: 7
         }
     ],
     countSwap: null,
     electTokenFirst: null,
     electTokenSecond: null,
+    swapComplate: []
 }
 
 export const swapToken = createSlice({
@@ -83,9 +100,18 @@ export const swapToken = createSlice({
                 state.electTokenSecond = actions.payload
                 state.showToken = false
             }
+        },
+
+        changeCountArrayTokens(state, actions){
+            state.arrayTokens[state.electTokenFirst].count = state.arrayTokens[state.electTokenFirst].count - actions.payload.currentInput
+            state.arrayTokens[state.electTokenSecond].count = state.arrayTokens[state.electTokenSecond].count + actions.payload.getToken
+        },
+
+        changeArrayTokens(state, actions){
+            state.swapComplate = [...state.swapComplate, actions.payload]
         }
     }
 })
 
-export const {toggleTokens, selectToken} = swapToken.actions;
+export const {toggleTokens, selectToken, changeCountArrayTokens, changeArrayTokens} = swapToken.actions;
 export default swapToken.reducer;

@@ -1,0 +1,80 @@
+@import '../../../assets/styles/allStyle.scss';
+
+.last{
+    
+    &__wrapper-block{
+        background: $swapOperationBg;
+        color: $colorWhite;
+        box-sizing: border-box;
+        width: 360px;
+        border-radius: 20px;
+        margin-top: 40px;
+    }
+
+    &__wrapper{
+        margin-top: -40px;
+    }
+
+    &__wrapper-item-operation-info{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__wrapper-item-operation-info-left{
+        display: flex;
+        justify-content: space-between;
+        width: 240px;
+        border-right: solid 1px $colorBtnFooterMeta;
+    }
+
+    &__wrapper-item-operation-info-left-token{
+        display: flex;
+        padding: 20px;
+
+        img{
+            width: 38px;
+        }
+
+        p{
+            @include poppinsLight();
+
+            margin: 0;
+
+            span{
+                @include jostLight();
+
+                font-size: 14px;
+                color: $colorSpanFooterMetaInfo;
+            }
+        }
+    }
+
+    &__wrapper-item-operation-info-left-token-price{
+        padding: 2px 0 0 8px;
+        box-sizing: border-box;
+    }
+
+    &__wrapper-item-operation-info-left-sell{
+        text-align: center;
+        p{
+            @include montserratRegular();
+
+            font-size: 20px;
+            margin: 0;
+            padding: 30px 20px;
+        }
+    }
+
+    &__wrapper-item-operation-info-swapPrice{
+        display: flex;
+        justify-content: center;
+        width: 120px;
+        padding-top: 30px;
+        font-size: 18px;
+
+        div{
+            @include montserratRegular();
+        }
+    }
+}
+
