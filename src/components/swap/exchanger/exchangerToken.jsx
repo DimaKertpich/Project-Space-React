@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import { useUpdateEffect } from 'usehooks-ts'
 import './exchangerStyle.scss'
 import SelectToken from "./selectToken"
 import ModalWinSwap from "./modalWinSwap"
@@ -44,7 +45,6 @@ function ExchangerToken(){
 
     let [toggleSwapMess, setToggleSwapMess] = useState(false)
     
-
     function modalWinSwap(){
         if(firstToken === null && secondToken === null){
             setToggleSwapMess(toggleSwapMess = !toggleSwapMess)
@@ -81,6 +81,14 @@ function ExchangerToken(){
         setGetToken(getToken = 0)
     }
 
+    // Active button swap
+
+    let [activeSwap, setActiveSwap] = useState(false)
+
+    useUpdateEffect(() =>{
+        console.log(1)
+        setActiveSwap(activeSwap = true)
+    }, [currentInput])
 
     return(
         <div className="exchanger">
@@ -129,8 +137,8 @@ function ExchangerToken(){
                         </div>
                     </div>
 
-                    <div className="exchanger__wrapper-swap-btn">
-                        <button onClick={() => exchangeTokens()} type="button">Exchange tokens</button>
+                    <div onClick={() => modalWinSwap()} className="exchanger__wrapper-swap-btn">
+                        {activeSwap === false ? <button type="button">Must Select Token</button> : <button onClick={() => exchangeTokens()} type="button">Exchange tokens</button>}
                     </div>
                 </div>
             </div>
