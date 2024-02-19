@@ -9,7 +9,7 @@ import { toggleTokens, changeArrayTokens, changeCountArrayTokens } from "../../s
 
 function ExchangerToken(){
 
-
+    
     let toggleTokensInfo = useSelector((state) => state.swap.showToken)
     let activeTokens = useSelector((state) => state.swap.arrayTokens)
     let firstToken = useSelector((state) => state.swap.electTokenFirst)
@@ -112,7 +112,7 @@ function ExchangerToken(){
                         
                         </div>
                         <div onClick={() => modalWinSwap()} className="exchanger__wrapper-swap-from-input">
-                            <div>{firstToken != null && `Max: ${activeTokens[firstToken].count}` }</div>
+                            <div>{firstToken != null && `Max: ${activeTokens[firstToken].count.toFixed(4)}` }</div>
                             <input 
                                 value={currentInput}
                                 onChange={(e) => currentQuantity(e.target.value)}>
@@ -132,13 +132,15 @@ function ExchangerToken(){
                             </div>
                         </div>
                         <div className="exchanger__wrapper-swap-to-input">
-                        <div>{secondToken != null && `Max: ${activeTokens[secondToken].count}` }</div>
+                        <div>{secondToken != null && `Max: ${activeTokens[secondToken].count.toFixed(4)}` }</div>
                             <input value={getToken} readOnly></input>
                         </div>
                     </div>
 
                     <div onClick={() => modalWinSwap()} className="exchanger__wrapper-swap-btn">
-                        {activeSwap === false ? <button type="button">Must Select Token</button> : <button onClick={() => exchangeTokens()} type="button">Exchange tokens</button>}
+                        {activeSwap === false ? 
+                        <button type="button">Must Select Token</button> : 
+                        <button onClick={() => exchangeTokens()} type="button">Exchange tokens</button>}
                     </div>
                 </div>
             </div>

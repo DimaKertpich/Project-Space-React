@@ -9,7 +9,7 @@ function LastOperation(){
     return(
         <div className="last">
             <div className="last__wrapper" >
-                {lastSwap.map((innerArray, outerIndex) => (
+                {lastSwap.slice(-4).map((innerArray, outerIndex) => (
                     <div className="last__wrapper-block" key={outerIndex}>
                         {innerArray.map((item, innerIndex) => (
                             <div key={innerIndex} className="last__wrapper-item-operation-info">
@@ -29,7 +29,7 @@ function LastOperation(){
                                         </div>
                                     </div>
                                     <div className="last__wrapper-item-operation-info-swapPrice">
-                                        <div style={{color: item.color}}>{item.arithmetic}{item.swapPrice}</div>
+                                        <div style={{color: item.color}}>{item.arithmetic}{parseFloat(item.swapPrice).toFixed(4).replace(/\.?0+$/, '')}</div>
                                         <div style={{color: item.color}}>{ item.abb}</div>
                                     </div>
                                 </div> 

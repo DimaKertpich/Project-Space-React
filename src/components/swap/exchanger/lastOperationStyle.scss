@@ -1,18 +1,21 @@
 @import '../../../assets/styles/allStyle.scss';
 
 .last{
-    
+
+    height: 680px;
+
     &__wrapper-block{
         background: $swapOperationBg;
         color: $colorWhite;
         box-sizing: border-box;
         width: 360px;
         border-radius: 20px;
-        margin-top: 40px;
+        margin-top: 30px;
+        
     }
 
     &__wrapper{
-        margin-top: -40px;
+        margin-top: -32px;
     }
 
     &__wrapper-item-operation-info{

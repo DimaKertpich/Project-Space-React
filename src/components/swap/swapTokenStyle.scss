@@ -3,7 +3,8 @@
 .swap{
     position: relative;
     background: url('../../assets/image/swap/spaceSwap__bg.png') no-repeat center;
-    padding: 140px 0;
+    background-size: cover;
+    padding: 180px 0;
     
     &__wrapper{
         display: flex;
