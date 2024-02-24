@@ -140,6 +140,71 @@
         margin-left: 6px;
     }
 
+    &__wrapper-registration-error{
+        @include poppinsRegular();
+        
+        color: $colorWhite;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    &__wrapper-logIn-loading,
+    &__wrapper-registration-loading{
+        @include poppinsRegular();
+        
+        font-size: 20px;
+        color: $colorWhite;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    &__wrapper-goodRegistr{
+        margin-top: 100px;
+    }
+
+    &__wrapper-goodRegistr-img{
+        text-align: center;
+
+        img{
+            width: 110px;
+        }
+    }
+
+    &__wrapper-goodRegistr-text{
+        @include poppinsRegular();
+        
+        margin-top: 30px;
+        text-align: center;
+        color: $colorWhite;
+        font-size: 20px;
+    }
+
+    &__wrapper-goodRegistr-btn{
+        text-align: center;
+        margin-top: 60px;
+
+        button{
+            @include poppinsRegular();
+
+            background: transparent;
+            border: none;
+            color: $colorWhite;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            border-bottom: 1px solid $colorWhite;
+        }
+    }
+
+    &__wrapper-logIn-error{
+        @include poppinsRegular();
+        
+        color: $colorWhite;
+        margin-top: 50px;
+        text-align: center;
+    }
 }
 
 

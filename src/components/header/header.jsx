@@ -10,12 +10,14 @@ import cometSecond from '../../assets/image/comet2.png'
 import cometThird from '../../assets/image/comet3.png'
 import { useDispatch, useSelector } from "react-redux"
 import { toggleAuthWin } from '../store/authUserSlice'
+import UserProfile from './userProfile'
 
 
 function Header(){
 
     const dispatch = useDispatch()
     const toggleAuth = useSelector((state) => state.auth.activeAuth)
+    const userUid = useSelector((state) => state.auth.userUid)
 
     const buttonRight ={
         marginRight: '10px'
@@ -58,7 +60,8 @@ function Header(){
                             <li>Home</li>
                             <li>Swap</li>
                             <li>Our project</li>
-                            <li onClick={() => dispatch(toggleAuthWin())}>Sing in</li>
+                            {userUid === null && <li onClick={() => dispatch(toggleAuthWin())}>Sing in</li>}
+                            {userUid !== null && <li>Profile</li>}
                         </ul>
                     </div>
                     <div className='header__wrapper-title'>
@@ -78,6 +81,8 @@ function Header(){
                     </div>
                 </div>    
             </div>
+
+            <UserProfile></UserProfile>
 
             <div ref={headerEl} className='header__parallax'>
                 <ul data-depth="0.1" id="scene" className='header__space-item'>

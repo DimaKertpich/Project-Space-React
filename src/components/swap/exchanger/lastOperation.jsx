@@ -9,6 +9,18 @@ function LastOperation(){
     return(
         <div className="last">
             <div className="last__wrapper" >
+                { lastSwap.length === 0 && 
+                    <div className="last__wrapper-toInform">
+                        <p>
+                            Make a purchase to complete the story
+                        </p>
+                    </div>
+                }
+                
+
+
+
+
                 {lastSwap.slice(-4).map((innerArray, outerIndex) => (
                     <div className="last__wrapper-block" key={outerIndex}>
                         {innerArray.map((item, innerIndex) => (
@@ -29,7 +41,7 @@ function LastOperation(){
                                         </div>
                                     </div>
                                     <div className="last__wrapper-item-operation-info-swapPrice">
-                                        <div style={{color: item.color}}>{item.arithmetic}{parseFloat(item.swapPrice).toFixed(4).replace(/\.?0+$/, '')}</div>
+                                        <div style={{color: item.color}}>{item.arithmetic}{parseFloat(item.swapPrice).toFixed(3).replace(/\.?0+$/, '')}</div>
                                         <div style={{color: item.color}}>{ item.abb}</div>
                                     </div>
                                 </div> 
