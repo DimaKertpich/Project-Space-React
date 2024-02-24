@@ -260,4 +260,16 @@
             }
     }
    }
+   
+   &__dashboard-animation{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: -540px;
+        transition: .4s ease-in;
+    }
+}
+
+.activeDashboard{
+    margin-right: 0;
 }

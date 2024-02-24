@@ -109,6 +109,7 @@ export const swapToken = createSlice({
 
         changeArrayTokens(state, actions){
             state.swapComplate = [...state.swapComplate, actions.payload]
+            console.log(state.swapComplate)
         }
     }
 })

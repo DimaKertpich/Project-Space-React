@@ -64,7 +64,8 @@ function ExchangerToken(){
                 swapPrice: currentInput,
                 abb: activeTokens[firstToken].abb,
                 action: 'Sell',
-                color: '#D31C1C'
+                color: '#D31C1C',
+                arithmetic: '-'
             },
             {
                 name: activeTokens[secondToken].name,
@@ -73,7 +74,8 @@ function ExchangerToken(){
                 swapPrice: getToken,
                 abb: activeTokens[secondToken].abb,
                 action: 'Buy',
-                color: '#1B9A37'
+                color: '#1B9A37',
+                arithmetic: '+'
             }
         ]))
 

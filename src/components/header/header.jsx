@@ -34,6 +34,11 @@ function Header(){
         return () => parallaxInstance.disable();
     })
 
+    function onDashboard(){
+        let getDashboard = document.querySelector('.header__dashboard-animation')
+        getDashboard.classList.toggle('activeDashboard')
+    }
+
     return(
         <header className='header'>
 
@@ -61,7 +66,7 @@ function Header(){
                             <li>Swap</li>
                             <li>Our project</li>
                             {userUid === null && <li onClick={() => dispatch(toggleAuthWin())}>Sing in</li>}
-                            {userUid !== null && <li>Profile</li>}
+                            {userUid !== null && <li onClick={() => onDashboard()}>Profile</li>}
                         </ul>
                     </div>
                     <div className='header__wrapper-title'>
@@ -82,7 +87,9 @@ function Header(){
                 </div>    
             </div>
 
-            <UserProfile></UserProfile>
+            <div className='header__dashboard-animation'>
+                <UserProfile offDashboard={onDashboard}></UserProfile>
+            </div>
 
             <div ref={headerEl} className='header__parallax'>
                 <ul data-depth="0.1" id="scene" className='header__space-item'>

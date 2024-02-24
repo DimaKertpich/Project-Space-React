@@ -4,7 +4,9 @@ const initialState = {
     userUid: null,
     userEmail: null,
     userName: null,
-    activeAuth: false
+    activeAuth: false,
+    toggleDashboard: false,
+    
 }
 
 export const userSlice = createSlice({
@@ -22,8 +24,14 @@ export const userSlice = createSlice({
             state.activeAuth = !state.activeAuth
         },
 
+        clearUserUid(state){
+            state.userUid = null
+            state.userEmail = null
+            state.userName = null
+        }
+
     }
 })
 
-export const { toggleAuthWin, authUser } = userSlice.actions;
+export const { toggleAuthWin, authUser, clearUserUid} = userSlice.actions;
 export default userSlice.reducer;

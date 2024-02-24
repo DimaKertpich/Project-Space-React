@@ -16,10 +16,6 @@ function LastOperation(){
                         </p>
                     </div>
                 }
-                
-
-
-
 
                 {lastSwap.slice(-4).map((innerArray, outerIndex) => (
                     <div className="last__wrapper-block" key={outerIndex}>
@@ -53,22 +49,4 @@ function LastOperation(){
     )
 } 
 export default LastOperation;
-
-// {lastSwap.map((innerArray, outerIndex) => (
-//     <div className="last__wrapper-block" key={outerIndex}>
-//         {innerArray.map((item, innerIndex) => {
-//             const itemKey = JSON.stringify(item);
-//             if (!uniqueItems[itemKey]) {
-//                 uniqueItems[itemKey] = true;
-//                 return (
-//                     <div className="last__wrapper-item-operation" key={innerIndex}>
-//                         { item.name }
-//                     </div>   
-//                 );
-//             }
-//             return null;
-//         })}
-//     </div>
-// ))}
-
                     
